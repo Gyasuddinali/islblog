@@ -51,6 +51,7 @@ import Quran from './Components/isl/Quran';
 import Tahrif from './Components/isl/Tahrif';
 import './Components/isl/isl.css';
 import Sidebar from './Components/isl/Sidebar'
+import AllCategories from './Components/isl/AllCategories';
 function App() {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
@@ -81,6 +82,7 @@ function App() {
   <Route path="/projects/supplications" element={<Supplications />} />
   <Route path="/projects/quran" element={<Quran />} />
   <Route path="/projects/tahrif" element={<Tahrif />} />
+  <Route path="/projects/allcategoriies" element={<AllCategories />} />
 
       </Routes>
     </>

@@ -11,6 +11,9 @@ function NavBar({ onSearch }) {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a href="#categories" className="navbar-brand d-flex align-items-center" onClick={handleNavClick}>
+  AllCategories
+</a>
       <Link className="navbar-brand d-flex align-items-center" to="/" onClick={handleNavClick}>
         <img
           src="https://al-islam.org/sites/all/themes/al_islam_bootstrap/images/book-pile.png"

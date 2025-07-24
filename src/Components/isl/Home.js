@@ -18,7 +18,9 @@ function Home() {
         <NewPopular />
         <JournalArchives />
         <ExploreIslam />
-        <AllCategories/>
+        <div id="categories">
+  <AllCategories />
+</div>
         <SpecialProjects />
          <LastFooter/>
       </div>

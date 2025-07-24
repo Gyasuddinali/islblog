@@ -1,53 +1,60 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const journalEntries = [
   {
-    title: "Exploring Shi'a Hadith Methodology",
-    subtitle: "A comparative look at sources and transmission chains.",
-    date: "June 2025",
+    title: "Message  of thaklayn",
     link: "/journals/shia-hadith-methodology",
   },
   {
-    title: "The Role of Women in Early Islam",
-    subtitle: "Historical narratives and reinterpretations.",
-    date: "May 2025",
+    title: "Aal-Tawhid",
     link: "/journals/women-in-early-islam",
   },
   {
-    title: "Revisiting the Constitution of Medina",
-    subtitle: "Pluralism and governance in the Prophet’s state.",
-    date: "April 2025",
+    title: "Al-Sherat",
     link: "/journals/constitution-of-medina",
+  },
+  {
+    title: "Al-Taqrib",
+    link: "/journals/unity-islamic-governance",
   },
 ];
 
 const JournalArchives = () => {
   return (
-    <section className="bg-light py-5">
+    <section className="py-5">
       <div className="container">
-        <h2 className="text-dark mb-4 text-center">📚 Journal Archives</h2>
+        <h2 className="text-center text-primary mb-5">📚 Journal Archives</h2>
 
         <div className="row g-4">
           {journalEntries.map((entry, index) => (
-            <div className="col-12 col-md-6 col-lg-4" key={index}>
-              <a href={entry.link} className="text-decoration-none text-dark">
-                <div className="card shadow-sm border-0 h-100">
-                  <div className="card-body">
-                    <h5 className="card-title">{entry.title}</h5>
-                    <p className="card-text text-muted small mb-2">
-                      {entry.subtitle}
-                    </p>
-                    <p className="text-muted small mb-0">
-                      <i className="bi bi-calendar3 me-1"></i>
-                      {entry.date}
-                    </p>
-                  </div>
+            <div
+              key={index}
+              className="col-12 col-sm-6 col-lg-3"
+            >
+              <Link to={entry.link} className="text-decoration-none">
+                <div className="card card-hover bg-danger h-100 border-0 shadow-sm d-flex justify-content-center align-items-center text-center p-4">
+                  <h6 className="text-white fw-semibold mb-0">{entry.title}</h6>
                 </div>
-              </a>
+              </Link>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Hover effect and styling */}
+      <style>{`
+        .card-hover {
+          border-radius: 12px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          min-height: 150px;
+        }
+        .card-hover:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 15px 30px rgba(255, 15, 15, 0.98);
+          background-color: #0ffa2eff;
+        }
+      `}</style>
     </section>
   );
 };
