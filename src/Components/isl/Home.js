@@ -7,6 +7,7 @@ import JournalArchives from "./JournalArchives";
 import ExploreIslam from "./ExploreIslam";
 import AllCategories from './AllCategories';
 import SpecialProjects from './SpecialProjects'; 
+import LastFooter from './LastFooter';
 function Home() {
   return (
     <div>
@@ -19,6 +20,7 @@ function Home() {
         <ExploreIslam />
         <AllCategories/>
         <SpecialProjects />
+         <LastFooter/>
       </div>
     </div>
   );

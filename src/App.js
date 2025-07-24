@@ -43,13 +43,14 @@ import CategoriesPage from './Components/isl/CategoriesPage';
 import SearchWrapper from './Components/isl/SearchWrapper';
 
 import AlIslamTV from './Components/isl/AlIslamTV';
-import AskQuestion from './CategoriesPageomponents/isl/AskQuestion';
+import AskQuestion from './Components/isl/AskQuestion';
 import GhadirKhumm from './Components/isl/GhadirKhumm';
 import InANutshell from './Components/isl/InANutshell';
 import Supplications from './Components/isl/Supplications';
 import Quran from './Components/isl/Quran';
 import Tahrif from './Components/isl/Tahrif';
-
+import './Components/isl/isl.css';
+import Sidebar from './Components/isl/Sidebar'
 function App() {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
@@ -65,6 +66,7 @@ function App() {
   return (
     <>
       <NavBar onSearch={handleSearch} />
+      <Sidebar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/book/:id" element={<BookDetails />} />

@@ -56,26 +56,32 @@ const ExploreIslam = () => {
         <div className="row g-4">
           {exploreSections.map((section, index) => (
             <div className="col-12" key={index}>
-              <div className="card border-0 shadow-sm p-3">
-                <div className="row align-items-center g-3">
+              <div className="card border-0 shadow-sm p-3 h-100">
+                <div className="row align-items-center g-4 flex-column flex-md-row">
                   {/* Image column */}
-                  <div className="col-12 col-md-4 text-center">
+                  <div className="col-md-4 text-center">
                     <img
                       src={section.image}
                       alt={section.title}
-                      className="img-fluid rounded"
-                      style={{ maxWidth: "400px" }}
-                    />
+                      className="img-fluid rounded mx-auto d-block"
+                     style={{
+                      maxWidth: "500px", 
+                      width: "90%",       
+                     height: "auto"
+                     }}  />
                   </div>
 
                   {/* Content column */}
-                  <div className="col-12 col-md-8">
+                  <div className="col-md-8">
                     <h5 className="card-title text-dark">{section.title}</h5>
                     <p className="card-text text-muted">{section.description}</p>
-                    <ul className="list-unstyled mb-0">
+                    <ul className="list-unstyled mb-0 d-flex flex-wrap gap-2">
                       {section.links.map((link, i) => (
                         <li key={i}>
-                          <Link href="#" className="btn btn-outline-dark text-decoration-none text-primary small">
+                          <Link
+                            to="#"
+                            className="btn btn-outline-primary btn-sm"
+                          >
                             {link}
                           </Link>
                         </li>
@@ -91,5 +97,6 @@ const ExploreIslam = () => {
     </section>
   );
 };
+
 
 export default ExploreIslam;
